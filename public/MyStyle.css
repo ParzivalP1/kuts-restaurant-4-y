@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+
+.myBackImageMain{
+    padding-block: 60px;
+    background-image: url("https://travellizy.com/storage/content/french_national_cuisine/cheese-3d7cc3b61b_x1000.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media screen and (min-resolution: 1080dpi) {
+    .myBackImageFooter {
+        display: none;
+    }
+}
+.myText{
+    background-color: antiquewhite;
+    font: 16px/26px"Arial",sans-serif;
+    padding-top: 6px;
+    padding-bottom: 12px;
+    padding-left: 40px;
+    text-transform: none;
+    color: black;
+    text-decoration: none;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.myHeaders{
+    background-color: #d7e6fa;
+    font: 16px/26px"Arial",sans-serif;
+    padding-top: 6px;
+    text-align: left;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.myShadow{
+    box-shadow: 0 0 10px;
+}
+table {
+    display: grid;
+    background: darkgrey; /* Цвет фона таблицы */
+    color: black; /* Цвет текста */
+    width: min-content; /* Ширина таблицы */
+    border: 1px solid black; /* Граница вокруг таблицы */
+    border-spacing: 7px 5px; /* Расстояние между границ */
+}
+td {
+    text-align: center; /* Выравнивание по центру */
+    background: #d7e6fa; /* Цвет фона ячеек */
+    padding: 5px; /* Поля вокруг текста */
+    border: 1px solid black; /* Рамка вокруг ячеек */
+}
+
+.grid_table {
+    display: grid;
+    grid-template-columns:
+        minmax(100px, 1fr)
+        minmax(100px, 1fr);
+    width:100%
+}
+
+.grid_table thead,
+.grid_table tbody,
+.grid_table tr {
+    display: contents;
+}
+
+.grid_table tr:nth-child(even) td {
+    background-color: #ddd;
+}
+
+.grid_table th {
+    background-color: #ddd;
+}
+
+.menu-main {
+    list-style: none;
+    margin: 40px 0 5px;
+    padding: 25px 0 5px;
+    text-align: center;
+    background: white;
+}
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+    content: "|";
+    color: #606060;
+    display: inline-block;
+    vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+    text-decoration: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 34px 0 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #9d999d;}
+.menu-main a.current, .menu-main a:hover{color: #feb386;}
+.menu-main a:before,
+.menu-main a:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    left: 50%;
+    background: #feb386;
+    transition: .8s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}
+@media (max-width: 550px) {
+    .menu-main {padding-top: 0;}
+    .menu-main li {display: block;}
+    .menu-main li:after {content: none;}
+    .menu-main a {
+        padding: 25px 0 20px;
+        margin: 0 30px;
+    }
+}

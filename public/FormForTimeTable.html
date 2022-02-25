@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Форма бронирования столиков</title>
+        <link rel = "stylesheet" href="MyStyle.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu-main">
+                <li><a href="index.html">Main page</a></li>
+                <li><a href="RestaurantMenu.html">Restaurant menu</a></li>
+                <li><a href="FormForTimeTable.html" class="current">Book a table</a></li>
+                <li><a href="LocOfOurRest.html">Location of our restaurants</a></li>
+                <li><a href="ContactUs.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Создание брони столика</h1>
+
+        <p>Нажмите 'Add' чтобы добавить бронь.</p>
+        <p>Нажмите 'Delete' чтобы удалить свою бронь.</p>
+
+        <label for='input'></label><input id='input' type='text' placeholder="Type where you want to book a table" />
+        <button onclick="pushIt()">Add</button>
+
+        <button onclick="popIt()">Delete</button>
+        <div id="demo"></div>
+    </main>
+</body>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="/Scripts/SiteForm.js"></script>
+</html>

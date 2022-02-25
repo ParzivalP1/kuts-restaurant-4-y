@@ -1,0 +1,40 @@
+.preloader {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: #fff;
+    z-index: 1001;
+}
+
+.preloader.preloader_inbox {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background: #fff;
+    z-index: unset;
+}
+
+.preloader__image {
+    position: absolute;
+    top: calc(50% - 60px);
+    left: calc(50% - 60px);
+    width: 120px;
+    height: 120px;
+    background: url('https://pcvector.ru/800/600/https/avatars.mds.yandex.net/get-pdb/1751404/ada69df4-1f50-4468-9806-3a4622480f06/orig') no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.loaded > .preloader {
+    display: block;
+}
+.test_preloader {
+    width: 100%;
+}
+.test_preloader.loaded > .test_list {
+    display: none;
+}

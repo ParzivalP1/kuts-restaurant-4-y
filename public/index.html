@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Kuts restaurant</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="изысканная кухня, незабываемые впечатления, великолепный сервис">
+    <meta name="description" content="3 мишленовских звезды,
+     французская и итальянская кухни, только высоко квалифицированные сотрудники,
+     соответствие новым тенденциям, мастерство и удивительные сочетания вкусов">
+
+    <link rel = "stylesheet" href="MyStyle.css">
+    <link rel = "stylesheet" href="PreloaderStyle.css">
+</head>
+<body>
+<div class="preloader">
+    <div class="preloader__image"></div>
+</div>
+
+
+    <header>
+        <nav>
+            <ul class="menu-main">
+                <li><a href="index.html" class="current">Main page</a></li>
+                <li><a href="RestaurantMenu.html">Restaurant menu</a></li>
+                <li><a href="FormForTimeTable.html">Book a table</a></li>
+                <li><a href="LocOfOurRest.html">Location of our restaurants</a></li>
+                <li><a href="ContactUs.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="myBackImageMain">
+        <article class="myText">
+            <h2 class="myHeaders">
+                Описание ресторана
+            </h2>
+            Вашему вниманию представляется эксклюзивный ресторан, удерживающий 3 мишленовских звезды.
+            Наше заведение специализируется на французской и итальянской кухнях, <br> обладает только высоко квалифицированными сотрудниками.
+            Мы постоянно следим за новыми тенденциями в кулинарном мире, <br> совершенствуя своё мастерство и открывая новые удивительные сочетания вкусов
+        </article>
+
+        <section class="myText">
+            <h2 class="myHeaders">
+                Расположение ресторана
+            </h2>
+            Мы находимся в городе N, улица гурманов, дом 69
+            <!--сюда бы фото карты-->
+        </section>
+
+        <aside class="myText">
+            <h2 class="myHeaders">
+                История создания ресторана
+            </h2>
+            <p>
+                part1
+                <pre class="myShadow">
+                  |\__/,|   (`\
+                _.|o o  |_   ) )
+              -(((---(((--------
+               </pre>
+            <p>
+                part2
+                <br>
+                <code class="myShadow">
+                    <strong>&lt;print meow&gt;</strong>
+                </code>
+                <br>
+                <p>
+                    <q> Нельзя приготовить омлет, не разбив нескольких яиц </q> <br>
+                    <cite> Максимилиан Робеспьер </cite> <br>
+                    <q> E=m*c<sup>2</sup> </q> <br>
+                    <cite> Альберт Эйнштейн </cite> <br>
+                </p>
+                <table>
+                    <tr><th>Стили</th><th>Заголовки</th></tr>
+                    <tr><td>Style1</td><td>Header1</td></tr>
+                    <tr><td>Style2</td><td>Header2</td></tr>
+                    <tr><td>Style3</td><td>Header3</td></tr>
+                </table>
+                <table class="grid_table">
+                    <thead>
+                        <th>Стили</th><th>Заголовки</th>
+                    </thead>
+                    <tbody>
+                        <tr><td>Style1</td><td>Header1</td></tr>
+                    </tbody>
+                </table>
+        </aside>
+    </main>
+
+    <footer>
+        <h2 class="myHeaders">
+            Наша контактная информация:
+        </h2>
+        <ul class="myText">
+            <li><del>phone number- +7 999 888 777</del></li>
+            <li><ins>phone number- +7 666 555 444</ins></li>
+            <li>our mail- kuts_restaurant@gmail.com</li>
+        </ul>
+        <h2 class="myHeaders">
+            Ссылка со всеми наградами ресторана:
+        </h2>
+        <ol class="myText">
+            <li>https://kutsreataurant/rewards.com</li>
+        </ol>
+        <script src="/Scripts/LoadTime1.js"></script>
+    </footer>
+    <script>
+        window.onload = function () {
+            document.body.classList.add('loaded');
+            window.setTimeout(function () {
+                document.body.classList.remove('loaded');
+            }, 500);
+        }
+    </script>
+</body>
+</html>
