@@ -4,7 +4,7 @@ import { LoggingInterceptor} from "./app.interceptor";
 @UseInterceptors(LoggingInterceptor)
 @Controller()
 export class AppController {
-  @Get(['/','index'])
+  @Get(['index'])
   @Render('index.hbs')
   root() {
     return {};
