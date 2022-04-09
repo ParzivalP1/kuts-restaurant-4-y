@@ -10,31 +10,31 @@ export class AppController {
     return {};
   }
 
-  @Get(['RestaurantMenu'])
+  @Get(['/', 'RestaurantMenu'])
   @Render('RestaurantMenu.hbs')
   RestaurantMenu() {
     return {};
   }
 
-  @Get(['BookTable'])
+  @Get(['/', 'BookTable'])
   @Render('BookTable.hbs')
   BookTable() {
     return {};
   }
 
-  @Get(['RestLocation'])
+  @Get(['/', 'RestLocation'])
   @Render('RestLocation.hbs')
   RestLocation() {
     return {};
   }
 
-  @Get(['ContactUs'])
+  @Get(['/', 'ContactUs'])
   @Render('ContactUs.hbs')
   ContactUs() {
     return {};
   }
 
-  @Get(['LogInOut'])
+  @Get(['/', 'LogInOut'])
   @Render('LogInOut.hbs')
   LogInOut() {
     return {};
