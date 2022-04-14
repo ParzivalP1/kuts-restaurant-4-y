@@ -30,7 +30,9 @@
     white-space: normal;
     flex-direction: column;
     justify-content: flex-start;
-
+}
+.myText p{
+    margin-left: 50px;
 }
 .myHeaders{
     background-color: #d7e6fa;
