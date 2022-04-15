@@ -9,10 +9,9 @@ export interface AnswerTime {
 @Injectable()
 export class LoggingInterceptor implements NestInterceptor {
   intercept(context: ExecutionContext, next: CallHandler): Observable<AnswerTime> {
-
     const now = Date.now();
     return next
       .handle()
-      .pipe(map(() => { return {dataTime: Date.now() - now}}));
+      .pipe(map((data) => { return {...data, dataTime: Date.now() - now}}));
   }
 }

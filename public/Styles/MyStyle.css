@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
 
-.myBackImageMain{
-    padding-block: 60px;
-    background-image: url("https://travellizy.com/storage/content/french_national_cuisine/cheese-3d7cc3b61b_x1000.jpg");
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 
-.myBackImageFooter {
-    background-image: url("http://rvopros.nethouse.ru/static/img/0000/0003/5385/35385911.b5qo25zbyb.W665.jpg");
+footer{
+    margin-top: 30px;
 }
 
+body{
+    background: url(../Images/ItalyKitchen.jpg) no-repeat;
+    background-size: 100%;
+}
 
 @media screen and (min-resolution: 1080dpi) {
     .myBackImageFooter {
@@ -88,13 +90,13 @@ td {
 }
 
 .menu-main {
-    list-style: none;
-    margin: 40px 0 5px;
-    padding: 25px 0 5px;
+    padding: 25px 0 5px 0;
     text-align: center;
-    background: white;
+    background-color: white;
+    margin-bottom: 20px;
 }
-.menu-main li {display: inline-block;}
+
+.menu-main li {display: inline-block; list-style: none;}
 .menu-main li:after {
     content: "|";
     color: #606060;
@@ -130,6 +132,7 @@ td {
 }
 .menu-main a:hover:before, .menu-main .current:before {left: 0;}
 .menu-main a:hover:after, .menu-main .current:after {right: 0;}
+
 @media (max-width: 550px) {
     .menu-main {padding-top: 0;}
     .menu-main li {display: block;}
