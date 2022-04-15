@@ -1,4 +1,4 @@
-<footer class="myBackImageFooter">
+<footer>
   <div class="myText">
     <h2 class="myHeaders">
       Наша контактная информация:
@@ -13,8 +13,13 @@
     <ol>
       <li>https://kutsreataurant/rewards.com</li>
     </ol>
-    <script src="/Scripts/LoadTime1.js"></script>
+
   </div>
-  <div>Total load time for server : {{dataTime}} ms</div>
-  <div>Total load time for user(client) : {{dataTime}} ms</div>
+  <div>
+    Total load time for server : {{dataTime}} ms
+    <script>
+      let result = {{dataTime}} - performance.now();
+      let text = document.createTextNode(' Load time user(client): '+result+' ms');
+    </script>
+  </div>
 </footer>
