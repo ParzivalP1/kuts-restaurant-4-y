@@ -1,14 +1,25 @@
-<main class="myBackImageMain">
-  <div  class="myText">
-    <h1 class="myHeaders">Создание брони столика</h1>
+<main>
+  <div class="book_table_all">
+    <div class="book_table_text">
+      <h1 class="myHeaders_book">Создание брони столика</h1>
 
-    <p>Нажмите 'Add' чтобы добавить бронь.</p>
-    <p>Нажмите 'Delete' чтобы удалить свою бронь.</p>
+      <p class="myText_book">Нажмите 'Add' чтобы добавить бронь.</p>
+      <p class="myText_book">Нажмите 'Delete' чтобы удалить свою бронь.</p>
 
-    <label for='input'></label><input id='input' type='text' placeholder="Type where you want to book a table" />
-    <button onclick="pushIt()">Add</button>
+      <input class="type_bar" type="text" placeholder="Type where you want to book a table" name="uname" required>
 
-    <button onclick="popIt()">Delete</button>
-    <div id="demo"></div>
+<!--      <label for='input'></label>-->
+<!--      <input id='input' type='text' placeholder="Type where you want to book a table"/>-->
+
+      <button onclick="pushIt()">Add</button>
+      <button onclick="popIt()">Delete</button>
+
+      <div id="demo"></div>
+    </div>
+
+    <div class="book_table_pic">
+      <img src="../Images/table2.jpg" width="100%" height="100%">
+    </div>
+
   </div>
 </main>
