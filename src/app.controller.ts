@@ -1,44 +1,12 @@
-import { Get, Controller, Render, UseInterceptors } from "@nestjs/common";
-import { LoggingInterceptor} from "./app.interceptor";
+import { Controller, Get } from '@nestjs/common';
+import { AppService } from './app.service';
 
-@UseInterceptors(LoggingInterceptor)
 @Controller()
 export class AppController {
-  @Get(['/', 'index'])
-  @Render('index.hbs')
-  root() {
-    return {};
-  }
+  constructor(private readonly appService: AppService) {}
 
-  @Get('RestaurantMenu')
-  @Render('RestaurantMenu.hbs')
-  RestaurantMenu() {
-    return {};
-  }
-
-  @Get('BookTable')
-  @Render('BookTable.hbs')
-  BookTable() {
-    return {};
-  }
-
-  @Get('RestLocation')
-  @Render('RestLocation.hbs')
-  RestLocation() {
-    return {};
-  }
-
-  @Get('ContactUs')
-  @Render('ContactUs.hbs')
-  ContactUs() {
-    return {};
-  }
-
-  @Get('LogInOut')
-  @Render('LogInOut.hbs')
-  LogInOut() {
-    return {};
+  @Get()
+  getHello(): string {
+    return this.appService.getHello();
   }
 }
-
-
