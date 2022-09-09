@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+header{
+    background: url(../Images/main.jpg) no-repeat;
+    background-size: 100%;
+    height: 70vh;
+}
+
+.myHeaders{
+    font: 36px/26px"Monotype Corsiva",sans-serif;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    padding: 200px 0 10px 0;
+}
+
+.myText{
+    font: 32px/26px"Monotype Corsiva",sans-serif;
+    color: black;
+    text-align: center;
+}
+
+.myHeadersFooter{
+    font: 36px/26px"Monotype Corsiva",sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-bottom: 5px;
+}
+.myTextFooter{
+    font: 32px/26px"Monotype Corsiva",sans-serif;
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.picture_with_text {
+    display: flex;
+    justify-content: center;
+}
+
+.picture_or_text {
+    padding: 10px;
+    margin: 10px;
+    width: 50%;
+}
+
+.footerTextPicture {
+    padding: 5% 0 5% 0;
+    background: url(../Images/menu1.jpg) no-repeat;
+    background-size: 100%;
+}
+.restNameMenu {
+    margin: 250px auto 0 auto;
+    font: 62px/26px"Monotype Corsiva",sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.menu-main {
+    padding: 25px 0 25px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.menu-main li {display: inline-block; list-style: none;}
+.menu-main li:after {
+    content: "|";
+    color: #606060;
+    display: inline-block;
+    vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+    text-decoration: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 34px 0 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #9d999d;}
+.menu-main a.current, .menu-main a:hover{color: #feb386;}
+.menu-main a:before,
+.menu-main a:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    left: 50%;
+    background: #feb386;
+    transition: .8s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}
+
+@media (max-width: 550px) {
+    .menu-main {padding-top: 0;}
+    .menu-main li {display: block;}
+    .menu-main li:after {content: none;}
+    .menu-main a {
+        padding: 25px 0 20px;
+        margin: 0 30px;
+    }
+}
