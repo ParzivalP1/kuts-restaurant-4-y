@@ -47,7 +47,7 @@ import {JwtService} from "@nestjs/jwt";
         });
         // if user doesn't exist throw exception
          if (!user)
-             throw new ForbiddenException(' User credentials incorrect');
+             throw new ForbiddenException('User credentials incorrect');
         // compare passwords
         const pwMatches = await bcrypt.compare(
             dto.password,
@@ -87,7 +87,7 @@ import {JwtService} from "@nestjs/jwt";
         if (!user || !user.hashedRt) throw new ForbiddenException("Access Denied");
 
         const rtMatches = await bcrypt.compare(rt, user.hashedRt);
-        if (!rtMatches) throw new ForbiddenException("Access Denied");
+        if (!rtMatches) throw new ForbiddenException("Refresh token expired");
 
         const tokens = await this.getTokens(user.id, user.email);
         await this.updateRtHash(user.id, tokens.refresh_token);
@@ -119,7 +119,7 @@ import {JwtService} from "@nestjs/jwt";
                },
                {
                    secret: 'at-secret',
-                   expiresIn: 60 * 15
+                   expiresIn: 60 * 15,
                },
            ),
            this.jwtService.signAsync(

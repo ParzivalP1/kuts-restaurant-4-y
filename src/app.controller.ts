@@ -39,6 +39,12 @@ export class AppController {
   LogInOut() {
     return {};
   }
+
+  @Get('register')
+  @Render('register.hbs')
+  register() {
+    return {};
+  }
 }
 
 

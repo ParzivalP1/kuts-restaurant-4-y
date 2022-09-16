@@ -79,6 +79,7 @@ header{
 }
 .menu-main li:last-child:after {content: none;}
 .menu-main a {
+    cursor: pointer;
     text-decoration: none;
     font-family: 'Ubuntu Condensed', sans-serif;
     letter-spacing: 2px;
