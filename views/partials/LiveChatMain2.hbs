@@ -1,0 +1,29 @@
+<main>
+    <div class="chat">
+        <div v-if="!joined">
+          <form @submit.prevent="join">
+             <label>What's your name?<label>
+             <input v-module="name" />
+             <button type="submit">Send</button>
+          </form>
+        </div>
+        <div class=""chat-container>
+            <div class="messages-container">
+                <div v-for="message" in messages>
+                   [{{ message.name }}]: {{ message.text }}
+                </div>
+            </div>
+
+            <div v-if="typingDisplay">{{typingDisplay}}</div>
+
+            <div class="message-input">
+                <form @submit.prevent="sendMessage">
+                    <label>Message:</label>
+                    <input v-model="messageText" @input="emitTyping" />
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

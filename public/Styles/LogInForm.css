@@ -51,6 +51,5 @@ img.avatar {
 }
 .login_menu_part {
     flex: 1;
-    height: 50vh;
     padding: 25px 20px 25px 20px;
 }

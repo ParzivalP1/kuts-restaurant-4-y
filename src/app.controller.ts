@@ -45,6 +45,12 @@ export class AppController {
   register() {
     return {};
   }
+
+  @Get('LiveChat')
+  @Render('LiveChat.hbs')
+  LiveChat() {
+    return {};
+  }
 }
 
 

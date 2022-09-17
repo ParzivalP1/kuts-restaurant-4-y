@@ -39,6 +39,8 @@ async function registration(){
         localStorage.setItem("access_t", resJson.access_token);
         localStorage.setItem("refresh_t", resJson.refresh_token);
         localStorage.setItem("UserStatus", "true");
+
+        location.href = "/index";
     }catch (e){
          console.log(e);
     }

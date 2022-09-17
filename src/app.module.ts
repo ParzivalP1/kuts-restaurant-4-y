@@ -5,11 +5,14 @@ import { AppService } from './app.service';
 import {AuthModule} from "./auth/auth.module";
 import { UserModule } from './user/user.module';
 import { PrismaModule } from './prisma/prisma.module';
+import { MessagesModule } from './messages/messages.module';
+import {ChatGateway} from "./app.gateway";
+import { BookingModule } from './booking/booking.module';
 
 
 @Module({
-  imports: [ConfigModule.forRoot({isGlobal: true}), AuthModule, UserModule, PrismaModule],
+  imports: [ConfigModule.forRoot({isGlobal: true}), AuthModule, UserModule, PrismaModule, MessagesModule, BookingModule],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, ChatGateway],
 })
 export class AppModule {}

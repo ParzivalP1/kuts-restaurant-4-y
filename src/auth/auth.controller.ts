@@ -2,8 +2,8 @@ import {Body, Controller, HttpCode, HttpStatus, Post, UseGuards} from "@nestjs/c
 import {AuthService} from "./auth.service";
 import {AuthDto} from "./dto";
 import {Tokens} from "./types";
-import {AtGuard, RtGuard} from "../common/guards";
-import {GetCurrentUser, GetCurrentUserId} from "../common/decorators";
+import {AtGuard, RtGuard} from "../authDefence/guards";
+import {GetCurrentUser, GetCurrentUserId} from "../authDefence/decorators";
 
 
 @Controller('auth')
