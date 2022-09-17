@@ -1,4 +1,4 @@
-const socket = io("http://localhost:12345");
+const socket = io("https://kuts-restaurant-4-y.herokuapp.com");
 
 const message = document.getElementById('message');
 const messages = document.getElementById('messages');
