@@ -20,8 +20,21 @@ model User {
     hash  String
     hashedRt String?
 
+    booking Booking?
+
     firstName String?
     lastName  String?
 
     @@map("users")
+}
+model Booking {
+    id Int @id @default(autoincrement())
+
+    visitorId Int @unique
+
+    visitor User @relation(fields:[visitorId], references:[id])
+    table Int
+    time String
+
+    @@map("books")
 }
